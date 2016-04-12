@@ -58,8 +58,28 @@ for( var counter = 0; counter < people.length; counter++ ) {
 var helloButton = document.querySelector("#hello");
 
 // Listen for clicks on the hello button
-
 helloButton.onclick = function() {
 	alert('Hello!');
 }
 
+// A function that calculates the grand total
+function calculateGrandTotal( prices ) {
+
+	//create a variable to hold the grand total
+	var grandTotal = 0;
+
+	//loop over all the prices
+	for(var i = 0; i < prices.length; i++) {
+		grandTotal = grandTotal + prices[i];
+	}
+
+	// Display the grand total
+	console.log( grandTotal );
+}
+
+//some shopping carts
+var cart1 = [20, 15, 45, 198]
+var cart2 = [1, 12 ,34, 56, 21]
+
+calculateGrandTotal( cart1 );
+calculateGrandTotal( cart2 );
